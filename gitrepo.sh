@@ -4,7 +4,7 @@
 # Configuration
 # Replace SSH_USERNAME, SSH_HOST, SSH_GIT_PATH with your details
 USER=joybellz
-HOST=https://github.com/joybellz
+HOST=git@github.com:joybellz
 GIT_PATH=git@github.com:
 
 REPO=${PWD##*/}
