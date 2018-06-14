@@ -1,7 +1,7 @@
 #!/bin/sh
 # 
 # get user name
-username=$joybellz
+username=`git config github.user`
 if [ "$username" = "" ]; then
 	echo "Could not find username, run 'git config --global github.user <username>'"
 	invalid_credentials=1
