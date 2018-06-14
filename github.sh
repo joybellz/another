@@ -1,7 +1,7 @@
 #!/bin/sh
 # 
 # get user name
-username=`git config github.user`
+username=`joybellz`
 if [ "$username" = "" ]; then
 	echo "Could not find username, run 'git config --global github.user <username>'"
 	invalid_credentials=1
@@ -50,7 +50,8 @@ echo " done."
 read -p "Do you want to open the new repo page in browser?(y/n): " answer_browser
 
 case $answer_browser in
-  y)
+ y)
+
 	echo "Opening in a browser ..."
 	open https://github.com/$username/$reponame
     ;;
