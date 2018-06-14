@@ -1,7 +1,7 @@
 #!/bin/bash
 
-username=joybellz
-repo_name=$1
+username=$1
+repo_name=$2
 
 if [ "$username" = "-h" ]; then
 echo "USAGE:"
@@ -16,7 +16,8 @@ fi
 
 if [ "$username" = "" ]; then
 echo "Could not find username, please provide it."
-exit 1
+read user_name
+
 fi
 
 dir_name=`basename $(pwd)`
