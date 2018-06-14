@@ -17,7 +17,6 @@ fi
 if [ "$username" = "" ]; then
 echo "Could not find username, please provide it."
 read user_name
-
 fi
 
 dir_name=`basename $(pwd)`
@@ -39,7 +38,6 @@ request=`curl --request POST "https://github.com/api/v3/session?login=$username&
 
 if [ "$request" = '{"message":"401 Unauthorized"}' ]; then
 echo "Username or password incorrect."
-exit 1
 fi
 
 token=`echo $request | cut -d , -f 28 | cut -d : -f 2 | cut -d '"' -f 2`
